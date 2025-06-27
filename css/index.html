@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superset Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo-container">
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="#home" class="logo">Super<span>Set</span></a>
+      </div>
+
+      <ul class="nav-tabs">
+        <li>
+          <a href="#home"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fas fa-book"></i> Documentationbb
+            <i class="fas fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="#documentation"
+              ><i class="fas fa-file-alt"></i> Documentation</a
+            >
+          </div>
+        </li>
+        <li>
+          <a href="#download"><i class="fas fa-download"></i> Download</a>
+        </li>
+        <li>
+          <a href="#community"><i class="fas fa-users"></i> Community</a>
+        </li>
+      </ul>
+
+      <div class="header-icons">
+        <button class="icon-btn" id="github-btn">
+          <i class="fab fa-github"></i>
+        </button>
+        <button class="icon-btn" id="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item active">
+          <div class="menu-header">
+            <span>Introduction</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <ul class="submenu">
+            <li>
+              <a href="#overview" class="active"
+                ><i class="fas fa-chevron-right"></i> Overview</a
+              >
+            </li>
+            <li>
+              <a href="#features"
+                ><i class="fas fa-chevron-right"></i> Features</a
+              >
+            </li>
+            <li>
+              <a href="#getting-started"
+                ><i class="fas fa-chevron-right"></i> Getting Started</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <div class="menu-header">
+            <span>Installation</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <ul class="submenu">
+            <li>
+              <a href="#system-requirements"
+                ><i class="fas fa-chevron-right"></i> System Requirements</a
+              >
+            </li>
+            <li>
+              <a href="#docker-installation"
+                ><i class="fas fa-chevron-right"></i> PyPI Installation</a
+              >
+            </li>
+          
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <div class="menu-header">
+            <span>Configuration</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <ul class="submenu">
+            <li>
+              <a href="#database-setup"
+                ><i class="fas fa-chevron-right"></i> Database Setup</a
+              >
+            </li>
+            <li>
+              <a href="#port-configuration"
+                ><i class="fas fa-chevron-right"></i> Service Port</a
+              >
+            </li>
+            <li>
+              <a href="#branding-customization"
+                ><i class="fas fa-chevron-right"></i> Customizing</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <div class="menu-header">
+            <span>Using Superset</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <ul class="submenu">
+            <li>
+              <a href="#creating-dashboards"
+                ><i class="fas fa-chevron-right"></i> Introduction</a
+              >
+            </li>
+            <li>
+              <a href="#mch-dashboard"
+                ><i class="fas fa-chevron-right"></i> Dashboard Interaction</a
+              >
+            </li>
+            <li>
+              <a href="#data-upload-visualization"
+                ><i class="fas fa-chevron-right"></i> Creating Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="#admin-management"
+                ><i class="fas fa-chevron-right"></i> Admin Panel</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Home Page -->
+      <section id="home" class="content-page active">
+        <h1 class="page-title">Welcome to Superset Documentation</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h2>About the Dashboard</h2>
+          <p>
+            The Integrated DHIS2-EMR Dashboard for Maternal and Child Health
+            (MCH) is a unified platform that consolidates key health data from
+            the DHIS2 (District Health Information System) and EMR (Electronic
+            Medical Records) systems. It is designed to provide real-time,
+            actionable insights for decision-makers across Ethiopia’s health
+            system, particularly focusing on reproductive, maternal, newborn,
+            and child health services.
+          </p>
+
+          <div class="features">
+            <div class="feature-card">
+              <i class="fas fa-rocket"></i>
+              <h3>Fast & Lightweight</h3>
+              <p>
+                Superset is designed to be easy to use while maintaining the
+                ability to scale to large organizations.
+              </p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-chart-bar"></i>
+              <h3>Rich Visualizations</h3>
+              <p>
+                Create interactive dashboards with a wide variety of
+                visualization options.
+              </p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-database"></i>
+              <h3>Multiple Databases</h3>
+              <p>
+                Connect to virtually any SQL-speaking datasource, also by
+                uploading external files like Excel,Csv,and Connect to Google
+                Sheet is possible .
+              </p>
+            </div>
+          </div>
+
+          <h3 ></h3>Getting Started</h3>
+          <p>To begin using Superset, follow these steps:</p>
+          <ol>
+            <li>Install Superset using Docker or manually</li>
+            <li>Configure your data sources</li>
+            <li>Create your first dashboard</li>
+            <li>Share insights with your team</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Introduction Pages -->
+      <section id="overview" class="content-page">
+        <h1 class="page-title">Introduction to Superset</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <h2>Overview</h2>
+          <p>
+            The Integrated DHIS2-EMR Dashboard, built using Apache Superset,
+            visualizes MCH data from DHIS2, EMR, and uploaded files—helping
+            health staff make informed decisions through interactive dashboards.
+          </p>
+
+          <h3><i class="fas fa-check-circle"></i> Key Concepts</h3>
+          <ul>
+            <li>
+              <strong>Datasources</strong>: Connects to DHIS2, EMR, and uploaded
+              CSV/Excel files for real-time or periodic MCH data.
+            </li>
+            <li>
+              <strong>Visualizations</strong>: Create charts and graphs to
+              represent your data
+            </li>
+            <li>
+              <strong>Dashboards</strong>: Combine multiple visualizations into
+              interactive dashboards
+            </li>
+            <li>
+              <strong>SQL Lab</strong>: A powerful SQL editor for advanced data
+              exploration
+            </li>
+          </ul>
+
+          <h3><i class="fas fa-archway"></i> Architecture</h3>
+          <p>Superset is built on a modern tech stack:</p>
+          <div class="code-block">
+            Frontend: React + Redux<br />
+            Backend: Python (Flask)<br />
+            Database: SQLAlchemy (supports multiple databases)<br />
+            Visualization: Apache ECharts, D3.js
+          </div>
+        </div>
+      </section>
+
+      <section id="getting-started" class="content-page active">
+        <h1 class="page-title">Welcome to Superset Documentation</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-home"></i>
+          </div>
+      
+
+          <h3>Getting Started</h3>
+          <p>To begin using Superset, follow these steps:</p>
+          <ol>
+            <li>Install Superset using Docker or manually</li>
+            <li>Configure your data sources</li>
+            <li>Create your first dashboard</li>
+            <li>Share insights with your team</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="features" class="content-page">
+        <h1 class="page-title">Superset Features</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h2>Feature Overview</h2>
+          <p>
+            Superset offers a comprehensive set of features for data exploration
+            and visualization:
+          </p>
+
+          <div class="features">
+            <div class="feature-card">
+              <i class="fas fa-chart-pie"></i>
+              <h3>Rich Visualization Library</h3>
+              <p>
+                Over 40 chart types including bar, line, pie, scatter, and
+                geospatial charts
+              </p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-table"></i>
+              <h3>Interactive Dashboards</h3>
+              <p>
+                Create and customize dashboards with drag-and-drop functionality
+              </p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-code"></i>
+              <h3>SQL Lab</h3>
+              <p>SQL queries are supported for advanced data exploration</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Security & Permissions</h3>
+              <p>Role-based access control and authentication integration</p>
+            </div>
+          </div>
+
+          <h3><i class="fas fa-bolt"></i> Advanced Features</h3>
+          <ul>
+            <li>Custom dashboards with multiple chart types.</li>
+            <li>Data filtering by region, zone, woreda, and facility.</li>
+            <li>Role-based access control to manage who sees what.</li>
+            <li>Row-level security for facility-specific data views</li>
+            <li>Upload data via Excel, CSV, or Google Sheets.</li>
+            <li>View and edit charts with drag-and-drop tools.</li>
+            <li>Download dashboards or charts as PDF or images.</li>
+            <li>Auto-refresh for live monitoring.</li>
+            <li>Auto-refresh for live monitoring.</li>
+          </ul>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- Main Content - New System Requirements Section -->
+<section id="system-requirements" class="content-page">
+  <h1 class="page-title">System Requirements</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fas fa-server"></i>
+    </div>
+    <h2>Minimum System Specifications</h2>
+    <p>Before installing Superset, ensure your system meets these requirements:</p>
+    
+    <div class="features">
+      <div class="feature-card">
+        <i class="fab fa-ubuntu"></i>
+        <h3>Operating System</h3>
+        <p>Ubuntu 20.04 LTS or later<br>Other Linux distributions with similar capabilities</p>
+      </div>
+      <div class="feature-card">
+        <i class="fab fa-python"></i>
+        <h3>Python Version</h3>
+        <p>Python 3.10 or newer Python version 
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-microchip"></i>
+        <h3>Hardware</h3>
+        <p>4GB RAM (minimum)<br>8GB RAM (recommended)<br>10GB free disk space</p>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-cogs"></i> Required Dependencies</h3>
+    <p>These dependencies must be installed before setting up Superset:</p>
+   
+    
+    <h3><i class="fas fa-check-circle"></i> Python Environment</h3>
+    <ul>
+      <li>Python virtual environment (venv module)</li>
+      <li>Latest version of pip and setuptools</li>
+      
+    </ul>
+    
+    <h3><i class="fas fa-database"></i> Database Requirements</h3>
+    <p>Superset requires a metadata database to store its configurations:</p>
+    <ul>
+      <li>SQLite (for development/testing only)</li>
+      <li>PostgreSQL 12+ (recommended for production)</li>
+      <li>MySQL 8.0+</li>
+      <li>MariaDB 10.3+</li>
+    </ul>
+  </div>
+</section>
+      <!-- Installation Pages -->
+      <section id="docker-installation" class="content-page">
+        <!-- Updated PyPI Installation Section -->
+  <h1 class="page-title">PyPI Installation</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fab fa-python"></i>
+    </div>
+    <h2>Installing Superset via PyPI</h2>
+    <p>Follow these steps to install Superset using the Python Package Index (PyPI).</p>
+    
+    <h3><i class="fas fa-terminal"></i> Step 1: System Preparation</h3>
+    <p>Update your system and install required dependencies:</p>
+    <div class="code-block">
+      # Update system packages
+      sudo apt update -y && sudo apt upgrade -y
+      
+      # Install essential dependencies
+      sudo apt-get install -y build-essential libssl-dev libffi-dev \
+      python3-dev python3-pip libsasl2-dev libldap2-dev \
+      default-libmysqlclient-dev python3.10-venv
+    </div>
+    
+    <h3><i class="fas fa-folder"></i> Step 2: Create Application Directory</h3>
+    <p>Set up a dedicated directory for Superset:</p>
+    <div class="code-block">
+      # Create application directory
+      sudo mkdir /app
+      sudo chown $USER /app
+      cd /app
+      
+      # Create Superset environment
+      mkdir superset
+      cd superset
+      python3 -m venv superset_env
+      source superset_env/bin/activate
+      
+      # Update pip
+      pip install --upgrade setuptools pip
+    </div>
+    
+    <h3><i class="fas fa-download"></i> Step 3: Install Superset</h3>
+    <p>Install required Python packages and Superset:</p>
+    <div class="code-block">
+      # Install required dependencies
+      pip install pillow
+      
+      # Install Apache Superset
+      pip install apache-superset
+    </div>
+    
+    <h3><i class="fas fa-cog"></i> Step 4: Configuration Setup</h3>
+    <p>Create a configuration file and set environment variables:</p>
+    <div class="code-block">
+      # Create configuration file
+      touch superset_config.py
+      
+      # Set configuration path
+      export SUPERSET_CONFIG_PATH=/app/superset/superset_config.py
+    </div>
+    
+    <p>Edit <code>superset_config.py</code> with the following content:</p>
+    <div class="code-block">
+      # Superset configuration
+      ROW_LIMIT = 5000
+      
+      # Flask App Builder configuration
+      SECRET_KEY = 'YOUR_OWN_RANDOM_GENERATED_SECRET_KEY'
+      
+      # Database configuration
+      SQLALCHEMY_DATABASE_URI = 'sqlite:////app/superset/superset.db?check_same_thread=false'
+      
+      # Security settings
+      TALISMAN_ENABLED = False
+      WTF_CSRF_ENABLED = False
+      
+      # Mapbox API key (optional)
+      MAPBOX_API_KEY = ''
+    </div>
+    
+    <p>Generate a secure secret key with this command:</p>
+    <div class="code-block">
+      openssl rand -base64 42
+    </div>
+    
+    <h3><i class="fas fa-database"></i> Step 5: Initialize Database</h3>
+    <p>Set up the metadata database and create an admin user:</p>
+    <div class="code-block">
+      # Set Flask application
+      export FLASK_APP=superset
+      
+      # Upgrade database
+      superset db upgrade
+      
+      # Create admin user
+      superset fab create-admin
+      
+      # Initialize Superset
+      superset init
+    </div>
+    
+    <h3><i class="fas fa-play"></i> Step 6: Running Superset</h3>
+    <p>Create a startup script to run Superset with Gunicorn:</p>
+    <div class="code-block">
+      # Create run script
+      nano run_superset.sh
+      
+      # Script content:
+      #!/bin/bash
+      export SUPERSET_CONFIG_PATH=/app/superset/superset_config.py
+      source /app/superset/superset_env/bin/activate
+      gunicorn -w 10 -k gevent --timeout 120 -b 0.0.0.0:8088 \
+        --limit-request-line 0 --limit-request-field_size 0 \
+        "superset.app:create_app()"
+      
+      # Make script executable
+      chmod +x run_superset.sh
+      
+      # Start Superset
+      ./run_superset.sh
+    </div>
+    
+    <h3><i class="fas fa-server"></i> Step 7: Create System Service</h3>
+    <p>Set up a systemd service for automatic startup:</p>
+    <div class="code-block">
+      # Create service file
+      sudo nano /etc/systemd/system/superset.service
+      
+      # Service content:
+      [Unit]
+      Description=Apache Superset Webserver
+      After=network.target
+      
+      [Service]
+      Environment=SUPERSET_HOME=/app/superset
+      Environment=PYTHONPATH=/app/superset
+      WorkingDirectory=/app/superset
+      ExecStart=/app/superset/run_superset.sh
+      
+      [Install]
+      WantedBy=multi-user.target
+      
+      # Enable and start service
+      sudo systemctl daemon-reload
+      sudo systemctl enable superset.service
+      sudo systemctl start superset.service
+    </div>
+    
+    <div class="feature-card" style="margin-top: 30px; text-align: left; max-width: 800px;">
+      <h3><i class="fas fa-check-circle"></i> Verification</h3>
+      <p>After completing these steps, your Superset instance should be running:</p>
+      <ul>
+        <li>Access the web interface at <code>http://your-server-ip:8088</code></li>
+        <li>Log in with the admin credentials you created</li>
+        <li>Verify the service status with: <code>sudo systemctl status superset.service</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+      <section id="manual-installation" class="content-page">
+        <h1 class="page-title">Manual Installation</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <h2>Manual Installation Guide</h2>
+          <p>Follow these steps to install Superset manually:</p>
+
+          <h3><i class="fas fa-cogs"></i> Prerequisites</h3>
+          <ul>
+            <li>Python 3.7+</li>
+            <li>pip package manager</li>
+            <li>Virtual environment (recommended)</li>
+          </ul>
+
+          <h3><i class="fas fa-code"></i> Installation Steps</h3>
+          <p>1. Create and activate a virtual environment:</p>
+          <div class="code-block">
+            python3 -m venv venv<br />
+            source venv/bin/activate
+          </div>
+
+          <p>2. Install Superset:</p>
+          <div class="code-block">pip install apache-superset</div>
+
+          <p>3. Initialize the database:</p>
+          <div class="code-block">superset db upgrade</div>
+
+          <p>4. Create an admin user:</p>
+          <div class="code-block">superset fab create-admin</div>
+
+          <p>5. Initialize Superset:</p>
+          <div class="code-block">superset init</div>
+
+          <p>6. Start the development server:</p>
+          <div class="code-block">
+            superset run -p 8088 --with-threads --reload --debugger
+          </div>
+        </div>
+      </section>
+
+      <!-- Configuration Pages -->
+      <section id="database-setup" class="content-page">
+        <h1 class="page-title">Database Configuration</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h2>Database Setup</h2>
+          <p>
+            Superset supports multiple databases as data sources. Follow these
+            steps to configure your database connection.
+          </p>
+
+          <h3><i class="fas fa-link"></i> Connecting a Database</h3>
+          <ol>
+            <li>Navigate to setting → Database Connections
+</li>
+            <li>Click the "+" button to add a new database</li>
+            <li>Enter your database connection string</li>
+            <li>Test the connection</li>
+            <li>Then Clcick on Connect</li>
+          </ol>
+
+          <h3><i class="fas fa-key"></i> Connection String Format</h3>
+          <p>Connection strings follow this format:</p>
+          <div class="code-block">
+            dialect+driver://username:password@host:port/database
+          </div>
+
+          <h3><i class="fas fa-table"></i> Supported Databases</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>Aurora PostgreSQL(Data Api)</li>
+            <li>Amazon Redshift</li>
+            <li>Google Sheet</li>
+            <li>Shillelagh</li>
+            <li>other...</li>
+          </ul>
+        </div>
+      </section>
+<!-- Port Configuration Section -->
+<section id="port-configuration" class="content-page">
+  <h1 class="page-title">Changing Superset Port</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fas fa-plug"></i>
+    </div>
+    <h2>Modifying the Service Port</h2>
+    <p>By default, Superset runs on port 8088. Follow these steps to change the port to your preferred value.</p>
+    
+    <div class="feature-card" style="background-color: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; text-align: left;">
+      <h3><i class="fas fa-exclamation-triangle"></i> Important Considerations</h3>
+      <ul>
+        
+        <li>Ensure the new port is not used by other services</li>
+        <li>Update firewall rules if needed</li>
+        <li>Restart the Superset service after making changes</li>
+      </ul>
+    </div>
+    
+    <h3><i class="fas fa-terminal"></i> Step 1: Locate the Startup Script</h3>
+    <p>Navigate to your Superset installation directory:</p>
+    <div class="code-block">
+      cd /app/superset
+    </div>
+    
+    <h3><i class="fas fa-edit"></i> Step 2: Edit the Startup Script</h3>
+    <p>Open the <code>run_superset.sh</code> file in a text editor:</p>
+    <div class="code-block">
+      nano run_superset.sh
+    </div>
+    
+    <div class="feature-card" style="margin: 20px 0; background-color: rgba(33, 150, 243, 0.05);">
+      <h3><i class="fas fa-file-code"></i> Current Script Content</h3>
+      <div class="code-block" style="margin: 10px 0; background-color: rgba(0, 0, 0, 0.03);">
+        #!/bin/bash<br>
+        export SUPERSET_CONFIG_PATH=/app/superset/superset_config.py<br>
+        . /app/superset/superset_env/bin/activate<br>
+        gunicorn \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;-w 10 \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;-k gevent \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;--timeout 120 \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;-b  0.0.0.0:8088 \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;--limit-request-line 0 \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;--limit-request-field_size 0 \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;--statsd-host localhost:8125 \<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"superset.app:create_app()"
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-exchange-alt"></i> Step 3: Modify the Port Number</h3>
+    <p>Find the line containing <code>-b  0.0.0.0:8088</code> and change the port number to your desired value:</p>
+    
+    <div class="features" style="grid-template-columns: 1fr 1fr; margin: 20px 0;">
+      <div class="feature-card" style="background-color: rgba(244, 67, 54, 0.05);">
+        <h3><i class="fas fa-times-circle"></i> Before Modification</h3>
+        <div class="code-block" style="margin: 10px 0; background-color: rgba(0, 0, 0, 0.03);">
+          -b  0.0.0.0:8088 \
+        </div>
+      </div>
+      
+      <div class="feature-card" style="background-color: rgba(76, 175, 80, 0.05);">
+        <h3><i class="fas fa-check-circle"></i> After Modification</h3>
+        <div class="code-block" style="margin: 10px 0; background-color: rgba(0, 0, 0, 0.03);">
+          -b  0.0.0.0:<mark style="background-color: #e3f2fd; padding: 2px 5px; border-radius: 3px;">8888</mark> \
+        </div>
+      </div>
+    </div>
+    
+    <p>For example, to change to port 8888:</p>
+    <div class="code-block">
+      # Change this line:
+      -b  0.0.0.0:8088 \
+      
+      # To:
+      -b  0.0.0.0:8888 \
+    </div>
+    
+    <h3><i class="fas fa-save"></i> Step 4: Save and Exit</h3>
+    <p>Save your changes and exit the editor:</p>
+    <div class="code-block">
+      # For nano editor:
+      Press Ctrl+O to save, then Enter to confirm
+      Press Ctrl+X to exit
+    </div>
+    
+    <h3><i class="fas fa-sync-alt"></i> Step 5: Restart the Service</h3>
+    <p>Apply the changes by restarting the Superset service:</p>
+    <div class="code-block">
+      sudo systemctl restart superset.service
+    </div>
+    
+    <h3><i class="fas fa-check"></i> Step 6: Verify the Change</h3>
+    <p>Check if Superset is running on the new port:</p>
+    <div class="code-block">
+      # Check service status
+      sudo systemctl status superset.service
+      
+      # Check port usage
+      sudo netstat -tuln | grep 8888
+    </div>
+    
+   
+    
+    <div class="feature-card" style="margin-top: 30px; text-align: left; max-width: 800px; background-color: rgba(0, 150, 136, 0.05);">
+      <h3><i class="fas fa-check-circle"></i> Verification</h3>
+      <p>After completing these steps:</p>
+      <ul>
+        <li>Access Superset at <code>http://your-server-ip:8888</code></li>
+       
+        <li>Confirm the service is listening on the new port:
+          <div class="code-block" style="margin: 10px 0;">
+            sudo lsof -i :8888
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Branding Customization Section -->
+<section id="branding-customization" class="content-page">
+  <h1 class="page-title">Superset Branding Customization</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fas fa-paint-brush"></i>
+    </div>
+    <h2>Customizing Your Superset Instance</h2>
+    <p>Customize the appearance of Superset to match your organization's branding. All configurations are made in the <code>superset_config.py</code> file.</p>
+    
+    <div class="feature-card" style="background-color: rgba(63, 81, 181, 0.05); border-left: 4px solid #3f51b5; margin-bottom: 30px;">
+      <h3><i class="fas fa-lightbulb"></i> Important Notes</h3>
+      <ul>
+        <li>Place custom assets in <code>/app/superset/static/assets/images/custom/</code></li>
+        <li>Restart Superset after making configuration changes</li>
+        <li>Clear browser cache to see immediate changes</li>
+        <li>Use PNG format for best results with transparent backgrounds</li>
+      </ul>
+    </div>
+    
+    <h3><i class="fas fa-signature"></i> Setting Application Name</h3>
+    <p>Customize the name displayed in the browser tab and throughout the application:</p>
+    <div class="code-block">
+      # Add to superset_config.py
+      APP_NAME = "My Analytics Platform"
+    </div>
+    
+    <div class="features" style="grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+      <div>
+        <h4><i class="fas fa-window-maximize"></i> Before Customization</h4>
+        <div style="background: white; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin-top: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+            <div style="width: 30px; height: 30px; background: #20a7c9; border-radius: 5px;"></div>
+            <div style="font-weight: bold;">Apache Superset</div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h4><i class="fas fa-window-maximize"></i> After Customization</h4>
+        <div style="background: white; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin-top: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+            <div style="width: 30px; height: 30px; background: #3f51b5; border-radius: 5px;"></div>
+            <div style="font-weight: bold;">My Analytics Platform</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-image"></i> Customizing the Logo</h3>
+    <p>Replace the default Superset logo with your organization's logo:</p>
+    <div class="code-block">
+      # Add to superset_config.py
+      
+      # Path to your custom logo
+      APP_ICON = "/static/assets/images/custom/logo.png"
+      
+      # Target path when clicking the logo
+      LOGO_TARGET_PATH = '/'  # Takes user to the welcome page
+      
+      # Tooltip when hovering over the logo
+      LOGO_TOOLTIP = "Data Insights Portal"
+      
+      # Text to display next to the logo
+      LOGO_RIGHT_TEXT = "Analytics Department"
+    </div>
+    
+    <div class="features" style="grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+      <div class="feature-card">
+        <h4><i class="fas fa-cog"></i> Configuration Options</h4>
+        <ul>
+          <li><strong>APP_ICON</strong>: Path to your logo file</li>
+          <li><strong>LOGO_TARGET_PATH</strong>: URL path when logo is clicked</li>
+          <li><strong>LOGO_TOOLTIP</strong>: Hover tooltip text</li>
+          <li><strong>LOGO_RIGHT_TEXT</strong>: Additional branding text</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <h4><i class="fas fa-image"></i> Logo Requirements</h4>
+        <ul>
+          <li>Optimal size: 180×40 pixels</li>
+          <li>PNG format with transparency</li>
+          <li>Place in static assets folder</li>
+          <li>Ensure proper file permissions</li>
+        </ul>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-icons"></i> Setting Favicon</h3>
+    <p>Customize the browser tab icon (favicon) for your Superset instance:</p>
+    <div class="code-block">
+      # Add to superset_config.py
+      FAVICONS = [
+          {
+              "href": "/static/assets/images/custom/favicon.png"
+          }
+      ]
+    </div>
+    
+    <div class="features" style="grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+      <div>
+        <h4><i class="fas fa-file-image"></i> Favicon Specifications</h4>
+        <ul>
+          <li>Optimal size: 32×32 pixels</li>
+          <li>Multiple sizes for different devices</li>
+          <li>ICO format also supported</li>
+          <li>Place in static assets folder</li>
+        </ul>
+      </div>
+      
+     
+    </div>
+    
+    <h3><i class="fas fa-object-group"></i> Complete Branding Example</h3>
+    <p>Here's a complete configuration example with all branding options:</p>
+    <div class="code-block">
+      # Complete branding configuration
+      APP_NAME = "Enterprise Analytics"
+      APP_ICON = "/static/assets/images/custom/enterprise-logo.png"
+      LOGO_TARGET_PATH = '/'
+      LOGO_TOOLTIP = "Enterprise Analytics Portal"
+      LOGO_RIGHT_TEXT = "Data Insights Team"
+      
+      FAVICONS = [
+          {
+              "href": "/static/assets/images/custom/favicon-32x32.png"
+          }
+      ]
+    </div>
+    
+    <div class="feature-card" style="margin-top: 30px; background-color: rgba(0, 150, 136, 0.05);">
+      <h3><i class="fas fa-check-circle"></i> Implementation Steps</h3>
+      <ol>
+        <li>Create directory for custom assets:
+          <div class="code-block" style="margin: 10px 0;">
+            mkdir -p /app/superset/static/assets/images/custom
+          </div>
+        </li>
+        <li>Upload your logo and favicon to this directory</li>
+        <li>Add branding configuration to <code>superset_config.py</code></li>
+        <li>Restart the Superset service:
+          <div class="code-block" style="margin: 10px 0;">
+            sudo systemctl restart superset.service
+          </div>
+        </li>
+        <li>Clear browser cache and refresh the page</li>
+      </ol>
+    </div>
+    
+    <div class="feature-card" style="margin-top: 30px; background-color: rgba(244, 67, 54, 0.05);">
+      <h3><i class="fas fa-exclamation-triangle"></i> Troubleshooting</h3>
+      <ul>
+        <li><strong>Images not appearing</strong>:
+          <ul>
+            <li>Verify file paths are correct</li>
+            <li>Confirm files are in static assets directory</li>
+          </ul>
+        </li>
+        <li><strong>Changes not visible</strong>:
+          <ul>
+            <li>Restart Superset service</li>
+            <li>Clear browser cache (Ctrl+F5 or Cmd+Shift+R)</li>
+            
+          </ul>
+        </li>
+        <li><strong>Poor image quality</strong>:
+          <ul>
+            <li>Use high-resolution source images</li>
+            <li>Ensure correct dimensions for each image type</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+</section>
+      <!-- Using Superset Pages -->
+      <section id="creating-dashboards" class="content-page">
+        <h1 class="page-title">Creating Dashboards</h1>
+
+        <div class="content-section">
+          <div class="tab-icon">
+            <i class="fas fa-chart-area"></i>
+          </div>
+          <h2>Dashboard Creation Guide</h2>
+          <p>
+            Dashboards are collections of charts and visualizations that provide
+            insights into your data.
+          </p>
+
+          <h3><i class="fas fa-plus-circle"></i> Introduction</h3>
+          <ol>
+          This Section helps health professionals and administrators use the Integrated DHIS2-EMR MCH Dashboard effectively. It covers how to log in, navigate, view MCH data, and manage user access. Both basic tasks and advanced features like role and security settings are included. It’s designed for users at all skill levels.
+          </ol>
+
+          <h3><i class="fas fa-sliders-h"></i> Dashboard Features</h3>
+          <ul>
+            <li>Responsive layout</li>
+            <li>Interactive filters</li>
+            <li>Custom CSS styling</li>
+            <li>Export to PDF/PNG</li>
+          </ul>
+
+          <div class="features">
+            <div class="feature-card">
+              <i class="fas fa-filter"></i>
+              <h3>Filters</h3>
+              <p>Add filters to allow users to customize dashboard views</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-paint-brush"></i>
+              <h3>Theming</h3>
+              <p>Customize colors and styles to match your brand</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MCH Dashboard Section -->
+<section id="mch-dashboard" class="content-page">
+  <h1 class="page-title">MCH Integrated Dashboard User Guide</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    
+    <!-- Login Section -->
+    <div class="section-header">
+      <h2>2.1 Login Authentication</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="feature-card" style="background-color: rgba(33, 150, 243, 0.05); margin-bottom: 25px;">
+      <h3><i class="fas fa-user-lock"></i> Access Requirements</h3>
+      <ul>
+        <li>Authorized username and password</li>
+        <li>Access to the network (10.139.8.51)</li>
+        <li>Web browser (Chrome, Firefox, or Edge recommended)</li>
+      </ul>
+    </div>
+    
+    <h3><i class="fas fa-sign-in-alt"></i> Login Steps</h3>
+    <ol class="steps-list">
+      <li>
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <span class="step-title">Open Login Page</span>
+        </div>
+        <p>Enter the login URL in your browser:</p>
+        <div class="code-block">
+          http://10.139.8.51:9093/login/
+        </div>
+      </li>
+      
+      <li>
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <span class="step-title">Enter Credentials</span>
+        </div>
+        <p>Provide your username and password in the login form</p>
+        <div class="image-placeholder">
+          <div class="image-label">Image 2.1: Login Authentication</div>
+          <div class="placeholder-box">Login Form Screenshot</div>
+        </div>
+      </li>
+      
+      <li>
+        <div class="step-header">
+          <span class="step-number">3</span>
+          <span class="step-title">Authenticate</span>
+        </div>
+        <p>Click the "Login" button to access the dashboard</p>
+      </li>
+    </ol>
+    <div class="dashboard-image"><img src="./images/22.png" alt=""></div>
+    <div class="security-note">
+      <i class="fas fa-shield-alt"></i>
+      <p><strong>Security Note:</strong> Keep your credentials secure. Contact the system administrator if you forget your password.</p>
+    </div>
+    
+    <!-- Tabs and Navigation Section -->
+    <div class="section-header">
+      <h2>2.2 Tabs and Navigation</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="feature-card" style="background-color: rgba(76, 175, 80, 0.05);">
+      <h3><i class="fas fa-layer-group"></i> Dashboard Organization</h3>
+      <p>The dashboard features specialized tabs for different Maternal and Child Health (MCH) data sources:</p>
+      <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="feature-card">
+          <i class="fas fa-database"></i>
+          <h4>DHIS2</h4>
+          <p>Health Information System data</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-file-medical"></i>
+          <h4>EMR</h4>
+          <p>Electronic Medical Records</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-baby"></i>
+          <h4>ANC</h4>
+          <p>Antenatal Care</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-syringe"></i>
+          <h4>Immunization</h4>
+          <p>Vaccination programs</p>
+        </div>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-filter"></i> Data Filtering</h3>
+    <p>Use the left navigation panel to filter data by:</p>
+    
+    <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 20px 0;">
+      <div class="feature-card">
+        <i class="fas fa-map"></i>
+        <h4>Region</h4>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-map-marked"></i>
+        <h4>Zone</h4>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-city"></i>
+        <h4>Woreda</h4>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clinic-medical"></i>
+        <h4>Health Center</h4>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-home"></i>
+        <h4>Health Post</h4>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-building"></i>
+        <h4>Ownership</h4>
+      </div>
+    </div>
+    
+    <div class="dashboard-image">
+  <img src="./images/1.png" alt="">
+</div>
+
+    
+    <div class="access-note">
+      <i class="fas fa-user-tag"></i>
+      <p><strong>Access Note:</strong> Filtering options are role-based. You'll only see options relevant to your permissions.</p>
+    </div>
+    
+    <!-- Dashboard Menu Options Section -->
+    <div class="section-header">
+      <h2>2.3 Dashboard Menu Options</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <h3><i class="fas fa-cog"></i> Accessing Global Actions</h3>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <p>Locate and click the menu icon (⋮) at the top-right corner of the dashboard</p>
+        </div>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-tasks"></i> Menu Options</h3>
+    <div class="menu-options">
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <div class="option-details">
+          <h4>Refresh Dashboard</h4>
+          <p>Reloads all charts with the latest data</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-expand"></i>
+        </div>
+        <div class="option-details">
+          <h4>Enter Fullscreen</h4>
+          <p>Expands dashboard for presentations</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-save"></i>
+        </div>
+        <div class="option-details">
+          <h4>Save As</h4>
+          <p>Create a copy with a new name</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-download"></i>
+        </div>
+        <div class="option-details">
+          <h4>Download</h4>
+          <p>Export as PDF or image</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="option-details">
+          <h4>Share</h4>
+          <p>Copy permalink or email dashboard</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-history"></i>
+        </div>
+        <div class="option-details">
+          <h4>Set Auto-Refresh</h4>
+          <p>Schedule automatic updates (5, 10, 30 min)</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dashboard-image"><img src="./images/2.png" alt=""></div>
+    
+    <!-- Chart Menu Options Section -->
+    <div class="section-header">
+      <h2>2.4 Chart Menu Options</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <h3><i class="fas fa-chart-bar"></i> Per-Chart Actions</h3>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <p>Click the menu icon (⋮) on any chart</p>
+        </div>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-bars"></i> Chart-Specific Options</h3>
+    <div class="menu-options">
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-expand"></i>
+        </div>
+        <div class="option-details">
+          <h4>Enter Fullscreen</h4>
+          <p>View chart in full-screen mode</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-redo"></i>
+        </div>
+        <div class="option-details">
+          <h4>Force Refresh</h4>
+          <p>Reload data for this chart</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-edit"></i>
+        </div>
+        <div class="option-details">
+          <h4>Edit Chart</h4>
+          <p>Modify settings (editors only)</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="option-details">
+          <h4>View Query</h4>
+          <p>See underlying data query</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-table"></i>
+        </div>
+        <div class="option-details">
+          <h4>View as Table</h4>
+          <p>Display data in tabular format</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="option-details">
+          <h4>Share</h4>
+          <p>Copy link or email this chart</p>
+        </div>
+      </div>
+      
+      <div class="menu-option">
+        <div class="option-icon">
+          <i class="fas fa-download"></i>
+        </div>
+        <div class="option-details">
+          <h4>Download</h4>
+          <p>Export as PDF/PNG/JPEG</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dashboard-image"><img src="./images/2.png" alt=""></div>
+    
+    <div class="summary-card">
+      <h3><i class="fas fa-clipboard-check"></i> Key Takeaways</h3>
+      <ul>
+        <li>Use tabs to switch between MCH program views</li>
+        <li>Filter data using the navigation panel</li>
+        <li>Access global actions through the dashboard menu</li>
+        <li>Utilize chart-specific options for detailed analysis</li>
+        <li>Share or export data as needed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <!-- ... for data upload and create visualization....  -->
+
+
+<section id="data-upload-visualization" class="content-page">
+  <h1 class="page-title">Uploading Data Sources and Creating Visualizations</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fas fa-database"></i>
+    </div>
+    
+    <!-- Uploading Data Sources -->
+    <div class="section-header">
+      <h2>3.1 Uploading Data Sources</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="feature-card" style="background-color: rgba(33, 150, 243, 0.05); margin-bottom: 25px;">
+      <h3><i class="fas fa-cloud-upload-alt"></i> Data Upload Options</h3>
+      <p>Superset supports multiple data source formats for analysis:</p>
+      <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="feature-card">
+          <i class="fab fa-google-drive"></i>
+          <h4>Google Sheets</h4>
+          <p>Live connection with automatic updates</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-file-csv"></i>
+          <h4>CSV Files</h4>
+          <p>Comma-separated values format</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-file-excel"></i>
+          <h4>Excel Files</h4>
+          <p>.xls or .xlsx formats</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-file-code"></i>
+          <h4>Columnar Files</h4>
+          <p>Parquet or ORC formats</p>
+        </div>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-upload"></i> Upload Process</h3>
+    <ol class="steps-list">
+      <li>
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <span class="step-title">Access Data Menu</span>
+        </div>
+        <p>Hover over the (+) menu near Settings and select "Data"</p>
+      </li>
+      
+      <li>
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <span class="step-title">Select Upload Type</span>
+        </div>
+        <p>Choose your data source type from the dropdown options</p>
+       <div class="dashboard-image">
+  <img src="./images/5.png" alt="">
+</div>
+
+      </li>
+      
+      <li>
+        <div class="step-header">
+          <span class="step-number">3</span>
+          <span class="step-title">Upload Excel File</span>
+        </div>
+        <p>Select "Upload Excel to Database" and complete the form:</p>
+        <div class="code-block">
+          Excel File: [Select your .xls/.xlsx file]
+          Database: [Select target database]
+          Schema: public
+          Table Name: [Enter descriptive name]
+        </div>
+        <div class="dashboard-image">
+  <img src="./images/4.png" alt="">
+</div>
+
+      </li>
+      
+      <li>
+        <div class="step-header">
+          <span class="step-number">4</span>
+          <span class="step-title">Complete Upload</span>
+        </div>
+        <p>Click "Upload" to finalize the process</p>
+      </li>
+    </ol>
+    
+    <div class="tip-note">
+      <i class="fas fa-lightbulb"></i>
+      <p><strong>Pro Tip:</strong> Clean and format your data before uploading to avoid import errors.</p>
+    </div>
+    
+    <!-- Creating Dashboards & Charts -->
+    <div class="section-header">
+      <h2>3.2 Creating Dashboards & Charts</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="feature-card" style="background-color: rgba(76, 175, 80, 0.05); margin-bottom: 25px;">
+      <h3><i class="fas fa-chart-bar"></i> Visualization Workflow</h3>
+      <p>Follow this process to transform your data into insights:</p>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-icon">1</div>
+          <div class="step-content">
+            <i class="fas fa-database"></i>
+            <h4>Access Dataset</h4>
+          </div>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="workflow-step">
+          <div class="step-icon">2</div>
+          <div class="step-content">
+            <i class="fas fa-sliders-h"></i>
+            <h4>Choose Chart Type</h4>
+          </div>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="workflow-step">
+          <div class="step-icon">3</div>
+          <div class="step-content">
+            <i class="fas fa-cogs"></i>
+            <h4>Configure Chart</h4>
+          </div>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="workflow-step">
+          <div class="step-icon">4</div>
+          <div class="step-content">
+            <i class="fas fa-save"></i>
+            <h4>Save to Dashboard</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h3><i class="fas fa-road"></i> Step-by-Step Guide</h3>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Access Your Dataset</span>
+      </div>
+      <p>Click the "Dataset" tab in the main navigation and select your uploaded dataset</p>
+     <div class="dashboard-image">
+  <img src="./images/6.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <span class="step-title">Explore Chart Builder</span>
+      </div>
+      <p>Familiarize yourself with the two main tabs: DATA and CUSTOMIZE</p>
+      <div class="dashboard-image">
+  <img src="./images/7.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">3</span>
+        <span class="step-title">Select Chart Type</span>
+      </div>
+      <p>Click "View all charts" and choose your visualization type</p>
+      <div class="dashboard-image">
+  <img src="./images/8.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">4</span>
+        <span class="step-title">Configure Your Chart</span>
+      </div>
+      <p>Drag and drop columns to appropriate fields and set parameters</p>
+      <div class="dashboard-image">
+  <img src="./images/9.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">5</span>
+        <span class="step-title">Save Your Chart</span>
+      </div>
+      <p>Provide a name and select/create a dashboard for your visualization</p>
+      <div class="dashboard-image">
+  <img src="./images/10.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">6</span>
+        <span class="step-title">Access Your Dashboard</span>
+      </div>
+      <p>Navigate to the "Dashboard" tab to view all your dashboards</p>
+      <div class="dashboard-image">
+  <img src="./images/11.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">7</span>
+        <span class="step-title">Locate Your Chart</span>
+      </div>
+      <p>Open the dashboard where you saved your chart to view it</p>
+     <div class="dashboard-image">
+  <img src="./images/12.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="summary-card">
+      <h3><i class="fas fa-clipboard-check"></i> Key Visualization Tips</h3>
+      <ul>
+        <li>Start with simple chart types (bar, line) before advanced visualizations</li>
+        <li>Use meaningful names for charts and dashboards</li>
+        <li>Apply filters to focus on specific data segments</li>
+        <li>Group related charts on the same dashboard</li>
+        <li>Regularly update data sources for current insights</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- .... admin pannel .....  -->
+
+
+<section id="admin-management" class="content-page">
+  <h1 class="page-title">Admin Panel Management & Configuration</h1>
+  
+  <div class="content-section">
+    <div class="tab-icon">
+      <i class="fas fa-user-cog"></i>
+    </div>
+    
+    <!-- User & Role Management -->
+    <div class="section-header">
+      <h2>4.1 User & Role Management</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="feature-card" style="background-color: rgba(63, 81, 181, 0.05); margin-bottom: 25px;">
+      <h3><i class="fas fa-users"></i> Access Control Components</h3>
+      <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="feature-card">
+          <i class="fas fa-user-tag"></i>
+          <h4>Roles</h4>
+          <p>Define data and feature access permissions</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-user"></i>
+          <h4>User Accounts</h4>
+          <p>Assign credentials and roles to individuals</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Row-Level Security</h4>
+          <p>Control data visibility by organizational hierarchy</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Roles Management -->
+    <div class="sub-section-header">
+      <h3><i class="fas fa-user-tag"></i> 4.1.1 Roles</h3>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Access Roles</span>
+      </div>
+      <p>Go to Settings → List Roles</p>
+      <div class="dashboard-image">
+  <img src="./images/13.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <span class="step-title">Create New Role</span>
+      </div>
+      <p>Click the "+" icon to add a new role</p>
+     <div class="dashboard-image">
+  <img src="./images/14.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">3</span>
+        <span class="step-title">Configure Role Permissions</span>
+      </div>
+      <p>Set role name and assign dataset permissions:</p>
+      <div class="code-block">
+        Role Name: [Descriptive Role Name]
+        Permissions:
+          - Datasource access on [PostgreSQL].[emr_mch_dataelements]
+          - Datasource access on [PostgreSQL].[dhis2_mch_dataelements]
+          - Datasource access on [PostgreSQL].[dhis2_mch_indicators]
+      </div>
+      <div class="dashboard-image">
+  <img src="./images/15.png" alt="">
+</div>
+
+    </div>
+    
+    <!-- User Accounts Management -->
+    <div class="sub-section-header">
+      <h3><i class="fas fa-user"></i> 4.1.2 User Accounts</h3>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Access Users</span>
+      </div>
+      <p>Go to Settings → Users</p>
+      <div class="dashboard-image">
+  <img src="./images/16.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <span class="step-title">Create New User</span>
+      </div>
+      <p>Click the "+" icon to add a new user</p>
+     <div class="dashboard-image">
+  <img src="./images/17.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">3</span>
+        <span class="step-title">Configure User Settings</span>
+      </div>
+      <p>Fill in required fields and assign roles:</p>
+      <div class="code-block">
+        Username: [User's email address]
+        Active: ✓
+        Roles: Gamma + [Custom Role]
+      </div>
+      <div class="dashboard-image">
+  <img src="./images/18.png" alt="">
+</div>
+
+    </div>
+    
+    <!-- Row-Level Security -->
+    <div class="sub-section-header">
+      <h3><i class="fas fa-shield-alt"></i> 4.1.3 Row-Level Security</h3>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Access RLS Settings</span>
+      </div>
+      <p>Go to Settings → Row Level Security</p>
+      <div class="dashboard-image">
+  <img src="./images/19.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <span class="step-title">Create New RLS Rule</span>
+      </div>
+      <p>Click the "+" icon to add a new rule</p>
+     <div class="dashboard-image">
+  <img src="./images/20.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">3</span>
+        <span class="step-title">Configure RLS Rule</span>
+      </div>
+      <p>Set parameters for data access restrictions:</p>
+      <div class="code-block">
+        Filter Type: Regular
+        Datasets: 
+          - emr_mch_dataelements
+          - dhis2_mch_dataelements
+          - dhis2_mch_indicators
+        Roles: [Custom Role]
+        Clause: 
+          woreda_id='K9i3rnx0Dxn'   # For Alefa Woreda
+          health_center_id='QeomUYeJijB' # For Gondar Hospital
+      </div>
+      <div class="dashboard-image">
+  <img src="./images/21.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="access-note">
+      <i class="fas fa-info-circle"></i>
+      <p><strong>Note:</strong> Users with higher-level access (e.g., Region) automatically inherit access to lower levels without needing specific RLS rules.</p>
+    </div>
+    
+    <!-- Logout Section -->
+    <div class="section-header">
+      <h2>4.2 Logout</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Access Settings Menu</span>
+      </div>
+      <p>Click the Settings tab at the top-right corner</p>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <span class="step-title">Select Logout</span>
+      </div>
+      <p>Scroll down and select "Logout" from the menu</p>
+     <div class="dashboard-image">
+  <img src="./images/24.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="security-note">
+      <i class="fas fa-shield-alt"></i>
+      <p><strong>Security Note:</strong> Always log out after using the dashboard to protect your account and ensure data security.</p>
+    </div>
+    
+    <!-- Login Process and Access Control Test -->
+    <div class="section-header">
+      <h2>5. Login Process and Woreda-Level Access Control Test</h2>
+      <div class="header-divider"></div>
+    </div>
+    
+    <div class="feature-card" style="background-color: rgba(0, 150, 136, 0.05); margin-bottom: 25px;">
+      <h3><i class="fas fa-user-check"></i> Testing User Access</h3>
+      <p>Verify that user "selamsw" can log in and only access data for Alefa Woreda</p>
+    </div>
+    
+    <div class="sub-section-header">
+      <h3><i class="fas fa-sign-in-alt"></i> 5.1 User Login Process</h3>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Access Login Page</span>
+      </div>
+      <p>User enters credentials at the login screen</p>
+      <div class="dashboard-image">
+  <img src="./images/22.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="sub-section-header">
+      <h3><i class="fas fa-lock"></i> 5.2 Accessing with Regional Restrictions</h3>
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <span class="step-title">Verify Restricted Access</span>
+      </div>
+      <p>Confirm user only sees data for Alefa Woreda</p>
+      <div class="dashboard-image">
+  <img src="./images/23.png" alt="">
+</div>
+
+    </div>
+    
+    <div class="step-container">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <span class="step-title">Test Data Visibility</span>
+      </div>
+      <p>Ensure user cannot access data from other regions</p>
+      <div class="test-cases">
+        <div class="test-case passed">
+          <i class="fas fa-check-circle"></i>
+          <span>Can view Alefa Woreda data</span>
+        </div>
+        <div class="test-case failed">
+          <i class="fas fa-times-circle"></i>
+          <span>Cannot view other Woreda data</span>
+        </div>
+        <div class="test-case passed">
+          <i class="fas fa-check-circle"></i>
+          <span>Can see relevant dashboards</span>
+        </div>
+        <div class="test-case failed">
+          <i class="fas fa-times-circle"></i>
+          <span>Cannot access restricted features</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="summary-card">
+      <h3><i class="fas fa-clipboard-check"></i> Access Control Checklist</h3>
+      <ul>
+        <li>Roles properly configured with dataset permissions</li>
+        <li>Users assigned to correct roles</li>
+        <li>Row-Level Security rules applied</li>
+        <li>Regional restrictions functioning as expected</li>
+        <li>Regular security audits performed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
