@@ -13,147 +13,153 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="logo-container">
-        <button class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-        <a href="#home" class="logo">Super<span>Set</span></a>
-      </div>
-
-      <ul class="nav-tabs">
-        <li>
-          <a href="#home"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li class="dropdown">
-          <a href="#"
-            ><i class="fas fa-book"></i> Documentationbb
-            <i class="fas fa-chevron-down"></i
-          ></a>
-          <div class="dropdown-content">
-            <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
-            <a href="#documentation"
-              ><i class="fas fa-file-alt"></i> Documentation</a
-            >
-          </div>
-        </li>
-        <li>
-          <a href="#download"><i class="fas fa-download"></i> Download</a>
-        </li>
-        <li>
-          <a href="#community"><i class="fas fa-users"></i> Community</a>
-        </li>
-      </ul>
-
-      <div class="header-icons">
-        <button class="icon-btn" id="github-btn">
-          <i class="fab fa-github"></i>
-        </button>
-        <button class="icon-btn" id="theme-toggle">
-          <i class="fas fa-moon"></i>
-        </button>
-      </div>
+        <div class="logo-container">
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#home" class="logo">Super<span>Set</span></a>
+        </div>
+        
+        <ul class="nav-tabs">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-book"></i> FAQ <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#faq-section" id="faq-link"><i class="fas fa-question-circle"></i> FAQ</a>
+                    
+                </div>
+            </li>
+           <li>
+        <a href="./pdf/biniyam_merged%20(2).pdf" download="Superset_User_Manual.pdf">
+            <i class="fas fa-download"></i> Download Manual
+        </a>
+    </li>
+            
+        </ul>
+        
+        <div class="header-icons">
+            <button class="icon-btn" id="github-btn">
+                <i class="fab fa-github"></i>
+            </button>
+            <button class="icon-btn" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
-
     <!-- Sidebar -->
-    <aside class="sidebar">
-      <ul class="sidebar-menu">
-        <li class="menu-item active">
-          <div class="menu-header">
-            <span>Introduction</span>
-            <i class="fas fa-chevron-right"></i>
-          </div>
-          <ul class="submenu">
-            <li>
-              <a href="#overview" class="active"
-                ><i class="fas fa-chevron-right"></i> Overview</a
-              >
+     <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="menu-item">
+                <div class="menu-header">
+                    <span>Introduction</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="submenu">
+                    <li>
+                        <a href="#overview" data-target="overview">
+                            <i class="fas fa-chevron-right"></i> Overview
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#features" data-target="features">
+                            <i class="fas fa-chevron-right"></i> Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#getting-started" data-target="getting-started">
+                            <i class="fas fa-chevron-right"></i> Getting Started
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-              <a href="#features"
-                ><i class="fas fa-chevron-right"></i> Features</a
-              >
-            </li>
-            <li>
-              <a href="#getting-started"
-                ><i class="fas fa-chevron-right"></i> Getting Started</a
-              >
-            </li>
-          </ul>
-        </li>
 
-        <li class="menu-item">
-          <div class="menu-header">
-            <span>Installation</span>
-            <i class="fas fa-chevron-right"></i>
-          </div>
-          <ul class="submenu">
-            <li>
-              <a href="#system-requirements"
-                ><i class="fas fa-chevron-right"></i> System Requirements</a
-              >
+            <li class="menu-item">
+                <div class="menu-header">
+                    <span>Installation</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="submenu">
+                    <li>
+                        <a href="#system-requirements" data-target="system-requirements">
+                            <i class="fas fa-chevron-right"></i> System Requirements
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pypi-installation" data-target="pypi-installation">
+                            <i class="fas fa-chevron-right"></i> PyPI Installation
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-              <a href="#docker-installation"
-                ><i class="fas fa-chevron-right"></i> PyPI Installation</a
-              >
-            </li>
-          
-          </ul>
-        </li>
 
-        <li class="menu-item">
-          <div class="menu-header">
-            <span>Configuration</span>
-            <i class="fas fa-chevron-right"></i>
-          </div>
-          <ul class="submenu">
-            <li>
-              <a href="#database-setup"
-                ><i class="fas fa-chevron-right"></i> Database Setup</a
-              >
+            <li class="menu-item">
+                <div class="menu-header">
+                    <span>Configuration</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="submenu">
+                    <li>
+                        <a href="#database-setup" data-target="database-setup">
+                            <i class="fas fa-chevron-right"></i> Database Setup
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#port-configuration" data-target="port-configuration">
+                            <i class="fas fa-chevron-right"></i> Service Port
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#branding-customization" data-target="branding-customization">
+                            <i class="fas fa-chevron-right"></i> Customizing
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-              <a href="#port-configuration"
-                ><i class="fas fa-chevron-right"></i> Service Port</a
-              >
-            </li>
-            <li>
-              <a href="#branding-customization"
-                ><i class="fas fa-chevron-right"></i> Customizing</a
-              >
-            </li>
-          </ul>
-        </li>
 
-        <li class="menu-item">
-          <div class="menu-header">
-            <span>Using Superset</span>
-            <i class="fas fa-chevron-right"></i>
-          </div>
-          <ul class="submenu">
-            <li>
-              <a href="#creating-dashboards"
-                ><i class="fas fa-chevron-right"></i> Introduction</a
-              >
+            <li class="menu-item">
+                <div class="menu-header">
+                    <span>Using Superset</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="submenu">
+                    <li>
+                        <a href="#creating-dashboards" data-target="creating-dashboards">
+                            <i class="fas fa-chevron-right"></i> Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#mch-dashboard" data-target="mch-dashboard">
+                            <i class="fas fa-chevron-right"></i> Dashboard Interaction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#data-upload-visualization" data-target="data-upload-visualization">
+                            <i class="fas fa-chevron-right"></i> Creating Dashboards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#admin-management" data-target="admin-management">
+                            <i class="fas fa-chevron-right"></i> Admin Panel
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-              <a href="#mch-dashboard"
-                ><i class="fas fa-chevron-right"></i> Dashboard Interaction</a
-              >
+            
+            <!-- FAQ Link -->
+            <li class="menu-item">
+                <div class="menu-header">
+                    <span>Support</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="submenu">
+                    <li>
+                        <a href="#faq-section" data-target="faq-section">
+                            <i class="fas fa-chevron-right"></i> FAQ
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-              <a href="#data-upload-visualization"
-                ><i class="fas fa-chevron-right"></i> Creating Dashboards</a
-              >
-            </li>
-            <li>
-              <a href="#admin-management"
-                ><i class="fas fa-chevron-right"></i> Admin Panel</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
+        </ul>
     </aside>
 
     <!-- Main Content -->
@@ -393,7 +399,7 @@
   </div>
 </section>
       <!-- Installation Pages -->
-      <section id="docker-installation" class="content-page">
+      <section id="pypi-installation" class="content-page">
         <!-- Updated PyPI Installation Section -->
   <h1 class="page-title">PyPI Installation</h1>
   
@@ -1040,6 +1046,7 @@
       </li>
     </ol>
     <div class="dashboard-image"><img src="./images/22.png" alt=""></div>
+
     <div class="security-note">
       <i class="fas fa-shield-alt"></i>
       <p><strong>Security Note:</strong> Keep your credentials secure. Contact the system administrator if you forget your password.</p>
@@ -1291,7 +1298,12 @@
     <div class="dashboard-image"><img src="./images/2.png" alt=""></div>
     
     <div class="summary-card">
+      <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/xpN6Hk33GJA" frameborder="0" allowfullscreen></iframe>
+</div>
       <h3><i class="fas fa-clipboard-check"></i> Key Takeaways</h3>
+      
+
       <ul>
         <li>Use tabs to switch between MCH program views</li>
         <li>Filter data using the navigation panel</li>
@@ -1299,6 +1311,7 @@
         <li>Utilize chart-specific options for detailed analysis</li>
         <li>Share or export data as needed</li>
       </ul>
+      
     </div>
   </div>
 </section>
@@ -1843,6 +1856,200 @@
     </div>
   </div>
 </section>
+<!-- .... FAQ .... -->
+        <section id="faq-section" class="content-page">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+            
+            <div class="content-section">
+                <div class="tab-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                
+                <div class="intro-card">
+                    <p>Find quick answers to common questions about Superset installation, configuration, and usage. If you don't find what you're looking for, contact our support team.</p>
+                </div>
+                
+                <div class="faq-container">
+                    <!-- Question 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">1</span>
+                            <h3>What are the minimum system requirements for running Superset?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Superset requires:</p>
+                            <ul>
+                                <li><strong>OS:</strong> Ubuntu 20.04 LTS or later, Debian 10 or later</li>
+                                <li><strong>Python:</strong> Version 3.10 or newer</li>
+                                <li><strong>Memory:</strong> 4GB RAM minimum, 8GB recommended</li>
+                                <li><strong>Storage:</strong> 10GB free disk space</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">2</span>
+                            <h3>How do I change the default port for Superset?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To change the port:</p>
+                            <ol>
+                                <li>Edit the <code>run_superset.sh</code> file</li>
+                                <li>Locate the line: <code>-b 0.0.0.0:8088 \</code></li>
+                                <li>Change 8088 to your desired port</li>
+                                <li>Save the file and restart the service</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">3</span>
+                            <h3>Why can't I see certain datasets or dashboards?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Access is controlled by:</p>
+                            <ul>
+                                <li><strong>Roles:</strong> Your assigned role may not have permission</li>
+                                <li><strong>Row-Level Security:</strong> Your access may be restricted to specific regions</li>
+                            </ul>
+                            <p>Contact your administrator to verify your permissions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">4</span>
+                            <h3>How do I reset my password?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Password reset options:</p>
+                            <ul>
+                                <li><strong>Click Setting:</strong> Use the "reset Password" link on login.</li>
+                                <li><strong>Insert Password:</strong> insert new password and confirm it.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">5</span>
+                            <h3>Why is my data not updating in real-time?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Possible reasons:</p>
+                            <ul>
+                                <li><strong>Caching:</strong> Superset may be serving cached data</li>
+                                <li><strong>Refresh Interval:</strong> Auto-refresh may not be enabled</li>
+                                <li><strong>Data Source:</strong> Source database may not be updating</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">6</span>
+                            <h3>How can I customize the look and feel of Superset?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can customize:</p>
+                            <ul>
+                                <li><strong>Branding:</strong> App name, logo, and favicon</li>
+                                <li><strong>Themes:</strong> Colors and styling</li>
+                                <li><strong>Dashboard Layout:</strong> Arrangement of charts</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 7 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">7</span>
+                            <h3>What should I do if I get "Connection Refused" errors?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Troubleshooting steps:</p>
+                            <ol>
+                                <li>Check if Superset service is running</li>
+                                <li>Verify your port number</li>
+                                <li>Confirm network connectivity</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 8 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">8</span>
+                            <h3>What is data triangulation and why is it important?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>triangulation:</p>
+                            <ul>
+                                <li><strong>Data triangulation</strong> compares and validates data from DHIS2, EMR, and other sources to ensure accuracy and consistency, supporting better decision-making.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 9 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">9</span>
+                            <h3>Why do I see "Permission Denied" when uploading files?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>This is usually caused by:</p>
+                            <ul>
+                                <li><strong>Role Restrictions:</strong> Your role may not have upload permissions</li>
+                                <li><strong>Database Access:</strong> You may not have write access</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 10 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="question-icon">10</span>
+                            <h3>Can I download charts and dashboards?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>download charts:</p>
+                            <li>Yes. You can download individual charts or entire dashboards in PDF or image formats for reports or presentations.</li>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="support-card">
+                    <h3><i class="fas fa-life-ring"></i> Need More Help?</h3>
+                    <p>If you didn't find the answer to your question, please contact our support team:</p>
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <i class="fas fa-envelope"></i>
+                            <span>biniyambin283@gmail.com</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
 
     <script src="./js/script.js"></script>
   </body>
